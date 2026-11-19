@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 0. التحقق من الملكية (ثابت في كل الصفحات) -->
+<meta name="google-site-verification" content="{{ site.google_site_verification }}">
+
+<!-- 1. إعدادات الترميز والعرض الأساسية -->
+<!-- 2. عنوان الصفحة والوصف التعريفي (ديناميكي مع الاحتفاظ بالنص الأصلي كافتراضي) -->
+<title>{% if page.title %}{{ page.title }}{% else %}Nidal Benyakhelf | محمد نضال بنيخلف - Developer & Filmmaker{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}الموقع الرسمي للمبرمج وصانع الأفلام محمد نضال بنيخلف (Mohamed Nidhal Benyakhelf). مطور برمجيات، مخرج أفلام مستقلة ووثائقيات، ورائد أعمال من الجزائر.{% endif %}">
+<meta name="author" content="{{ site.author }}">
+
+<!-- 3. الكلمات المفتاحية (تدمج كلمات الصفحة مع القائمة الأساسية الضخمة) -->
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}, {% endif %}{{ site.base_keywords }}">
+
+<!-- 4. وسوم المشاركة على وسائل التواصل الاجتماعي (Open Graph) -->
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Nidal Benyakhelf | محمد نضال بنيخلف{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}مطور برمجيات، مخرج أفلام مستقلة، ورائد أعمال - الموقع الرسمي والأعمال.{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}">
+<meta property="og:image" content="https://github.com/nidalbenyakhelf.png?size=512">
+<meta property="og:locale" content="ar_DZ">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- 5. الرابط الأساسي لمنع تكرار الفهرسة (يتحدث تلقائياً لكل صفحة) -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- 6. البيانات المنظمة (JSON-LD) - تم توسيع sameAs ليشمل كل حساباتك -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohamed Nidhal Benyakhelf",
+  "alternateName": [
+    "Nidal Benyakhelf",
+    "محمد نضال بنيخلف",
+    "بن يخلف محمد نضال",
+    "نضال بنيخلف",
+    "尼达尔·本·叶海亚夫",
+    "निदाल बेन्याखेलफ़"
+  ],
+  "url": "{{ page.url | absolute_url }}",
+  "jobTitle": [
+    "Software Developer",
+    "Film Director",
+    "Entrepreneur"
+  ],
+  "knowsAbout": [
+    "Software Development",
+    "Computer Science",
+    "C++",
+    "Qt",
+    "Python",
+    "Web Development",
+    "Filmmaking",
+    "Documentary Directing",
+    "Screenwriting"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Medea",
+    "addressCountry": "DZ"
+  },
+  "sameAs": [
+    "{{ site.social_links.github }}",
+    "{{ site.social_links.gitlab }}",
+    "{{ site.social_links.codeberg }}",
+    "{{ site.social_links.hashnode }}",
+    "{{ site.social_links.chess }}"
+  ]
+}
+</script>
+
+<!-- استدعاء ملف التنسيقات الموحد -->
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

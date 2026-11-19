@@ -1,0 +1,28 @@
+# الإعدادات الأساسية
+title: "Nidal Benyakhelf"
+description: "الموقع الرسمي للمبرمج وصانع الأفلام محمد نضال بنيخلف (Mohamed Nidhal Benyakhelf). مطور برمجيات، مخرج أفلام مستقلة ووثائقيات، ورائد أعمال من الجزائر."
+url: "https://nidal.is-a.dev"
+baseurl: ""
+author: "Mohamed Nidhal Benyakhelf"
+
+# كود التحقق من Google Search Console
+google_site_verification: "VKpLNA8vrF3laBu5mzBi2r0ys-NCuKlBI2SJzuptPOc"
+
+# الروابط الموحدة (تُستخدم في JSON-LD والفوتر)
+social_links:
+  github: "https://github.com/nidalbenyakhelf"
+  gitlab: "https://gitlab.com/nidalbenyakhelf"
+  codeberg: "https://codeberg.org/nidalbenyakhelf"
+  hashnode: "https://hashnode.com/@nidalbenyakhelf"
+  chess: "https://www.chess.com/player/nidalbenyakhelf"
+  email: "mailto:contact@nidal.is-a.dev"
+
+# الكلمات المفتاحية الأساسية (تُدمج مع كلمات كل صفحة)
+base_keywords: "Nidal Benyakhelf, Mohamed Nidhal Benyakhelf, Nidhal Benyakhelf, nidalbenyakhelf, محمد نضال بنيخلف, بن يخلف محمد نضال, بن يخلف نضال, نضال بنيخلف, 穆罕默德·尼达尔·本·叶海亚夫, 尼达尔·本·叶海亚夫, मोहम्मद निदाल बेन्याखेलफ़, निदाल बेन्याखेलफ़, Software Developer, Programmer, Film Director, Documentary Filmmaker, Screenwriter, Entrepreneur, C++, Qt, Python, Web Developer, مبرمج, مطور برمجيات, مخرج أفلام, صانع أفلام, كاتب سيناريو, رائد أعمال, المدية, الجزائر, Medea, Algeria"
+
+# إعدادات Jekyll
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
