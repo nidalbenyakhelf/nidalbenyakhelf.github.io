@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="{{ page.lang | default: 'ar' }}" dir="{{ page.dir | default: 'rtl' }}">
 <head>
-  {% include head.html %}
+    {% include head.html %}
 </head>
 <body>
-  {% include header.html %}
-  
-  <main class="site-main">
-    {{ content }}
-  </main>
-  
-  {% include footer.html %}
-  
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    {% include header.html %}
+    
+    <main class="site-main">
+        <!-- هذا السطر هو المسؤول عن تحويل محتوى الصفحات إلى HTML -->
+        {{ content }} 
+    </main>
+    
+    {% include footer.html %}
+    
+    <!-- تحميل JS في النهاية لتحسين الأداء -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
