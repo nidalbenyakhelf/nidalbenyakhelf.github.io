@@ -1,6 +1,6 @@
----
+  ---
 title: "Nidal Benyakhelf | محمد نضال بنيخلف - Developer & Filmmaker"
-description: "الموقع الرسمي للمبرمج وصانع الأفلام محمد نضال بنيخلف. مشاريع برمجية، أفلام وثائقية، وسيرة ذاتية."
+description: "الموقع الرسمي للمبرمج وصانع الأفلام محمد نضال بنيخلف."
 layout: default
 ---
 
@@ -9,8 +9,8 @@ layout: default
     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
     <span data-i18n="about_title">نبذة سريعة</span>
   </h2>
-  <p style="color: var(--text-secondary); font-size: 17px; line-height: 1.8;" data-i18n="about_text">
-    أوثق هنا رحلتي في بناء أدوات برمجية مفتوحة المصدر، وإنتاج أعمال سينمائية تعكس واقعنا. استكشف المشاريع والأفلام عبر الأقسام أدناه.
+  <p style="color: var(--text-secondary); font-size: 16px; line-height: 1.7;" data-i18n="about_text">
+    أوثق هنا رحلتي في بناء أدوات برمجية مفتوحة المصدر، وإنتاج أعمال سينمائية تعكس واقعنا.
   </p>
 </section>
 
@@ -25,8 +25,8 @@ layout: default
         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         <span data-i18n="card_projects">المشاريع البرمجية</span>
       </h3>
-      <p data-i18n="card_projects_desc">Wasel, Yoobify, Nuru والمزيد من الأدوات المفتوحة المصدر.</p>
-      <span class="card-action" data-i18n="view_all">عرض الكل ←</span>
+      <p data-i18n="card_projects_desc">Wasel, Yoobify, Nuru والمزيد.</p>
+      <span class="card-action" data-i18n="view_all">عرض الكل</span>
     </a>
     
     <a href="/filmmaking/" class="duo-card card-pink">
@@ -34,8 +34,8 @@ layout: default
         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.5-1.1.2-2.4 1.3-2.9l13.8-5.1c1.1-.5 2.4.2 2.9 1.3Z"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
         <span data-i18n="card_films">الأعمال السينمائية</span>
       </h3>
-      <p data-i18n="card_films_desc">أفلام وثائقية، سيناريوهات، ومشاريع إخراجية مستقلة.</p>
-      <span class="card-action" data-i18n="view_all">عرض الكل ←</span>
+      <p data-i18n="card_films_desc">أفلام وثائقية وسيناريوهات مستقلة.</p>
+      <span class="card-action" data-i18n="view_all">عرض الكل</span>
     </a>
   </div>
 </section>
