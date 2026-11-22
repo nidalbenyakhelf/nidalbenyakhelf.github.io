@@ -1,168 +1,106 @@
-// نظام الترجمة متعدد اللغات
+// === Translations ===
 const translations = {
   ar: {
     name: "محمد نضال بنيخلف",
-    bio: "مطور برمجيات وصانع أفلام وثائقية من المدية، الجزائر. أؤمن بأن التكنولوجيا والفن أداتان لربط الناس وخدمة المجتمع، وأبني أدوات بسيطة ذات تأثير حقيقي.",
-    nav_about: "نبذة",
-    nav_projects: "المشاريع",
-    nav_platforms: "المنصات",
-    nav_contact: "تواصل",
-    about_title: "نبذة عني",
-    about_text: "أؤمن بأن التكنولوجيا والفن أداتان لربط الناس وخدمة المجتمع. هنا أوثق رحلتي في بناء أدوات برمجية بسيطة ذات تأثير حقيقي، وإنتاج أعمال سينمائية تعكس واقعنا.",
-    projects_title: "المشاريع البرمجية",
-    project_wasel: "منصة وصل (Wasel)",
-    project_wasel_desc: "منصة ويب تقدمية (PWA) مصممة لربط المتطوعين والجهات المانعة مع الجمعيات المحلية.",
-    project_yoobify: "Yoobify",
-    project_yoobify_desc: "تطبيق ويب لاكتشاف الموسيقى عبر الثقافات واللغات المختلفة.",
-    project_nuru: "دعم لغة Nuru",
-    project_nuru_desc: "إضافة رسمية لتوفير دعم تلوين الصيغة للغة Nuru في محرر VS Code.",
-    project_codestats: "Codestats",
-    project_codestats_desc: "أداة خفيفة مبنية بـ Python لتحليل إحصائيات أكواد البرمجة.",
-    view_project: "زيارة المشروع ↗",
-    platforms_title: "أين تجدني",
-    contact_title: "تواصل معي",
-    contact_text: "هل لديك فكرة، سؤال، أو مجرد تحية؟ صندوق الوارد الخاص بي مفتوح دائماً.",
-    email_me: "راسلني عبر البريد",
-    send_email: "إرسال رسالة ✉️",
-    footer_about_title: "عن الموقع",
-    footer_about_text: "موقع شخصي يوثق رحلة محمد نضال بنيخلف في البرمجة وصناعة الأفلام. مبني بـ Jekyll على GitHub Pages.",
-    footer_links_title: "روابط سريعة",
-    footer_contact_title: "تواصل",
-    footer_made_with: "صُنع بـ",
-    footer_and: "و"
+    bio: "مطور برمجيات وصانع أفلام وثائقية من المدية، الجزائر. أؤمن بأن التكنولوجيا والفن أداتان لربط الناس وخدمة المجتمع.",
+    nav_home: "الرئيسية", nav_projects: "المشاريع", nav_films: "الأفلام", nav_cv: "السيرة الذاتية",
+    about_title: "نبذة سريعة", about_text: "أوثق هنا رحلتي في بناء أدوات برمجية مفتوحة المصدر، وإنتاج أعمال سينمائية تعكس واقعنا.",
+    explore_title: "استكشف الأقسام", card_projects: "المشاريع البرمجية", card_projects_desc: "Wasel, Yoobify, Nuru والمزيد.",
+    card_films: "الأعمال السينمائية", card_films_desc: "أفلام وثائقية، سيناريوهات، ومشاريع إخراجية.",
+    view_all: "عرض الكل ←", platforms_title: "منصاتي",
+    projects_title: "أحدث المشاريع", view_more_github: "عرض كل المشاريع على GitHub",
+    films_title: "عدسة الواقع", film_upcoming: "أعمال قيد الإنتاج", film_upcoming_desc: "مساحة مخصصة لعرض أحدث الأعمال الوثائقية.",
+    coming_soon: "قريباً..."
   },
   en: {
     name: "Mohamed Nidhal Benyakhelf",
-    bio: "Software developer and documentary filmmaker from Medea, Algeria. I believe technology and art are tools to connect people and serve communities, building simple tools with real impact.",
-    nav_about: "About",
-    nav_projects: "Projects",
-    nav_platforms: "Platforms",
-    nav_contact: "Contact",
-    about_title: "About Me",
-    about_text: "I believe technology and art are tools to connect people and serve communities. Here I document my journey in building simple software tools with real impact, and producing cinematic works that reflect our reality.",
-    projects_title: "Software Projects",
-    project_wasel: "Wasel Platform",
-    project_wasel_desc: "A progressive web app (PWA) designed to connect volunteers and donors with local associations.",
-    project_yoobify: "Yoobify",
-    project_yoobify_desc: "A web app to discover music across different cultures and languages.",
-    project_nuru: "Nuru Language Support",
-    project_nuru_desc: "Official extension providing syntax highlighting for Nuru language in VS Code.",
-    project_codestats: "Codestats",
-    project_codestats_desc: "A lightweight Python tool for analyzing code statistics across projects.",
-    view_project: "View Project ↗",
-    platforms_title: "Find Me On",
-    contact_title: "Get In Touch",
-    contact_text: "Have an idea, a question, or just want to say hi? My inbox is always open.",
-    email_me: "Email Me",
-    send_email: "Send Message ✉️",
-    footer_about_title: "About This Site",
-    footer_about_text: "A personal website documenting Mohamed Nidhal Benyakhelf's journey in programming and filmmaking. Built with Jekyll on GitHub Pages.",
-    footer_links_title: "Quick Links",
-    footer_contact_title: "Contact",
-    footer_made_with: "Made with",
-    footer_and: "and"
+    bio: "Software developer and documentary filmmaker from Medea, Algeria. Building open-source tools and cinematic works.",
+    nav_home: "Home", nav_projects: "Projects", nav_films: "Films", nav_cv: "CV",
+    about_title: "Quick About", about_text: "Documenting my journey in building open-source software tools and producing cinematic works that reflect our reality.",
+    explore_title: "Explore Sections", card_projects: "Software Projects", card_projects_desc: "Wasel, Yoobify, Nuru and more open-source tools.",
+    card_films: "Filmmaking Works", card_films_desc: "Documentaries, screenplays, and independent directing projects.",
+    view_all: "View All ←", platforms_title: "My Platforms",
+    projects_title: "Latest Projects", view_more_github: "View All Projects on GitHub",
+    films_title: "Lens of Reality", film_upcoming: "Works in Progress", film_upcoming_desc: "Space dedicated to showcasing latest documentaries and behind-the-scenes.",
+    coming_soon: "Coming Soon..."
   },
   fr: {
     name: "Mohamed Nidhal Benyakhelf",
-    bio: "Développeur logiciel et réalisateur de documentaires de Médéa, Algérie. Je crois que la technologie et l'art sont des outils pour connecter les gens et servir les communautés.",
-    nav_about: "À propos",
-    nav_projects: "Projets",
-    nav_platforms: "Plateformes",
-    nav_contact: "Contact",
-    about_title: "À Propos de Moi",
-    about_text: "Je crois que la technologie et l'art sont des outils pour connecter les gens et servir les communautés. Ici, je documente mon parcours dans la création d'outils logiciels simples avec un impact réel.",
-    projects_title: "Projets Logiciels",
-    project_wasel: "Plateforme Wasel",
-    project_wasel_desc: "Une application web progressive (PWA) conçue pour connecter bénévoles et donateurs avec les associations locales.",
-    project_yoobify: "Yoobify",
-    project_yoobify_desc: "Une application web pour découvrir de la musique à travers différentes cultures et langues.",
-    project_nuru: "Support Langue Nuru",
-    project_nuru_desc: "Extension officielle fournissant la coloration syntaxique pour le langage Nuru dans VS Code.",
-    project_codestats: "Codestats",
-    project_codestats_desc: "Un outil Python léger pour analyser les statistiques de code à travers les projets.",
-    view_project: "Voir le Projet ↗",
-    platforms_title: "Où Me Trouver",
-    contact_title: "Me Contacter",
-    contact_text: "Vous avez une idée, une question, ou voulez juste dire bonjour? Ma boîte de réception est toujours ouverte.",
-    email_me: "Envoyez-moi un Email",
-    send_email: "Envoyer un Message ✉️",
-    footer_about_title: "À Propos du Site",
-    footer_about_text: "Un site personnel documentant le parcours de Mohamed Nidhal Benyakhelf en programmation et cinéma. Construit avec Jekyll sur GitHub Pages.",
-    footer_links_title: "Liens Rapides",
-    footer_contact_title: "Contact",
-    footer_made_with: "Fait avec",
-    footer_and: "et"
+    bio: "Développeur logiciel et réalisateur de documentaires de Médéa, Algérie. Je crée des outils open-source et des œuvres cinématographiques.",
+    nav_home: "Accueil", nav_projects: "Projets", nav_films: "Films", nav_cv: "CV",
+    about_title: "À Propos", about_text: "Je documente mon parcours dans la création d'outils logiciels open-source et la production d'œuvres cinématographiques.",
+    explore_title: "Explorer", card_projects: "Projets Logiciels", card_projects_desc: "Wasel, Yoobify, Nuru et plus d'outils open-source.",
+    card_films: "Œuvres Cinématographiques", card_films_desc: "Documentaires, scénarios et projets de réalisation indépendants.",
+    view_all: "Voir Tout ←", platforms_title: "Mes Plateformes",
+    projects_title: "Derniers Projets", view_more_github: "Voir Tous les Projets sur GitHub",
+    films_title: "Objectif Réalité", film_upcoming: "Travaux en Cours", film_upcoming_desc: "Espace dédié aux derniers documentaires et coulisses.",
+    coming_soon: "Bientôt..."
   }
 };
 
-// تطبيق الترجمة
+// === Language System ===
 function setLanguage(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  
-  const elements = document.querySelectorAll('[data-i18n]');
-  elements.forEach(el => {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
+    if (translations[lang]?.[key]) el.textContent = translations[lang][key];
   });
-  
-  // تحديث الزر والقائمة
-  const langNames = { ar: 'العربية', en: 'English', fr: 'Français' };
-  document.getElementById('currentLang').textContent = langNames[lang];
-  
-  document.querySelectorAll('.lang-option').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-  
-  // حفظ الاختيار
+  const names = { ar: 'العربية', en: 'English', fr: 'Français' };
+  document.getElementById('currentLang').textContent = names[lang];
+  document.querySelectorAll('.lang-option').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
   localStorage.setItem('preferredLang', lang);
 }
 
-// تهيئة زر اللغة
 document.addEventListener('DOMContentLoaded', () => {
-  const langBtn = document.getElementById('langBtn');
-  const langDropdown = document.getElementById('langDropdown');
-  
-  // تحميل اللغة المحفوظة
-  const savedLang = localStorage.getItem('preferredLang') || 'ar';
-  setLanguage(savedLang);
-  
-  // تبديل القائمة
-  langBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    langDropdown.classList.toggle('active');
-  });
-  
-  // اختيار لغة
-  document.querySelectorAll('.lang-option').forEach(btn => {
-    btn.addEventListener('click', () => {
-      setLanguage(btn.dataset.lang);
-      langDropdown.classList.remove('active');
-    });
-  });
-  
-  // إغلاق القائمة عند النقر خارجها
-  document.addEventListener('click', () => {
-    langDropdown.classList.remove('active');
-  });
-  
-  langDropdown.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
-});
+  // Lang Switcher
+  const btn = document.getElementById('langBtn'), drop = document.getElementById('langDropdown');
+  setLanguage(localStorage.getItem('preferredLang') || 'ar');
+  btn.addEventListener('click', e => { e.stopPropagation(); drop.classList.toggle('active'); });
+  document.querySelectorAll('.lang-option').forEach(b => b.addEventListener('click', () => { setLanguage(b.dataset.lang); drop.classList.remove('active'); }));
+  document.addEventListener('click', () => drop.classList.remove('active'));
+  drop.addEventListener('click', e => e.stopPropagation());
 
-// التمرير السلس للروابط الداخلية
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
+  // Custom Cursor
+  const cursor = document.createElement('div');
+  cursor.className = 'custom-cursor';
+  cursor.innerHTML = '<svg viewBox="0 0 24 24"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/></svg>';
+  document.body.appendChild(cursor);
+  document.addEventListener('mousemove', e => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+  document.addEventListener('mousedown', () => cursor.classList.add('clicking'));
+  document.addEventListener('mouseup', () => cursor.classList.remove('clicking'));
+
+  // Visitor Flag (Using ipapi.co free tier)
+  fetch('https://ipapi.co/json/')
+    .then(r => r.json())
+    .then(data => {
+      const flag = document.getElementById('visitorFlag');
+      document.getElementById('flagImg').src = `https://flagcdn.com/w40/${data.country_code.toLowerCase()}.png`;
+      document.getElementById('countryName').textContent = data.country_name;
+      flag.style.opacity = '1';
+    })
+    .catch(() => document.getElementById('visitorFlag').style.display = 'none');
+
+  // Fetch Random GitHub Projects
+  const projContainer = document.getElementById('githubProjects');
+  if (projContainer) {
+    fetch('https://api.github.com/users/nidalbenyakhelf/repos?sort=updated&per_page=100')
+      .then(r => r.json())
+      .then(repos => {
+        // Shuffle and pick 4
+        const shuffled = repos.sort(() => 0.5 - Math.random()).slice(0, 4);
+        const colors = ['card-green', 'card-blue', 'card-pink', 'card-purple'];
+        projContainer.innerHTML = shuffled.map((r, i) => `
+          <a href="${r.html_url}" target="_blank" rel="noopener" class="duo-card ${colors[i % 4]}">
+            <h3>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              ${r.name}
+            </h3>
+            <p>${r.description || 'مشروع مفتوح المصدر'}</p>
+            <span class="card-action">⭐ ${r.stargazers_count} · 🍴 ${r.forks_count}</span>
+          </a>
+        `).join('');
+      })
+      .catch(() => projContainer.innerHTML = '<p style="color:var(--text-secondary)">تعذر تحميل المشاريع. <a href="https://github.com/nidalbenyakhelf" style="color:var(--duo-green)">زيارة GitHub مباشرة</a></p>');
+  }
 });
