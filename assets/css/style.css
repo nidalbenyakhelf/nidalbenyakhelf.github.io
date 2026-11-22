@@ -6,18 +6,20 @@
   --border-black: #2c3e50; --radius-lg: 16px; --radius-md: 12px;
 }
 
-/* إعادة ضبط أساسية */
+/* === إعادة ضبط شاملة === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body { 
-  background-color: var(--bg-white); color: var(--text-primary); 
-  font-family: 'Readex Pro', 'Nunito', sans-serif; font-size: 16px; 
-  line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased;
-  display: flex; flex-direction: column; /* مهم جداً لتمديد المحتوى */
+  background-color: var(--bg-white); 
+  color: var(--text-primary) !important; /* إجبار اللون الأسود */
+  font-family: 'Readex Pro', 'Nunito', sans-serif; 
+  font-size: 16px; line-height: 1.6; min-height: 100vh; 
+  -webkit-font-smoothing: antialiased;
+  display: flex; flex-direction: column;
 }
 
-/* --- Custom Cursor --- */
+/* === مؤشر الماوس === */
 @media (min-width: 769px) { body, a, button, input { cursor: none !important; } }
 @media (max-width: 768px) { .custom-cursor { display: none !important; } body, a, button, input { cursor: auto !important; } }
 
@@ -29,30 +31,32 @@ body {
 .custom-cursor svg { width: 100%; height: 100%; fill: white; stroke: var(--border-black); stroke-width: 2.5; }
 .custom-cursor.clicking { transform: translate(-50%, -50%) scale(0.85); }
 
-/* --- Header Layout Fix --- */
+/* === الهيدر والعناصر العلوية === */
 .site-header { 
   text-align: center; padding: 40px 20px 24px; max-width: 680px; margin: 0 auto; width: 100%; 
+  visibility: visible !important; opacity: 1 !important; display: block !important; /* طوارئ لإظهار الهيدر */
 }
 
 .header-top { 
-  display: flex; justify-content: space-between; align-items: center; 
+  display: flex !important; justify-content: space-between; align-items: center; 
   margin-bottom: 32px; width: 100%; 
 }
 
-/* Visitor Flag Styling */
+/* زر البلد */
 .visitor-flag {
-  display: inline-flex; align-items: center; gap: 6px; background: #f0f0f0;
+  display: inline-flex !important; align-items: center; gap: 6px; background: #f0f0f0;
   border: 2px solid var(--border-black); border-radius: 20px; padding: 3px 8px;
   font-size: 11px; font-weight: 700; box-shadow: 0 2px 0 var(--border-black);
+  color: var(--text-primary) !important;
 }
 .visitor-flag img { width: 16px; height: 12px; object-fit: cover; border-radius: 2px; border: 1px solid #ccc; }
 
-/* Language Switcher Styling */
+/* زر اللغة */
 .lang-switcher { position: relative; display: inline-block; }
 .lang-btn { 
-  display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: var(--bg-white);
+  display: inline-flex !important; align-items: center; gap: 6px; padding: 5px 10px; background: var(--bg-white);
   border: 2px solid var(--border-black); border-radius: 50px; font-size: 12px; font-weight: 700; 
-  color: var(--text-primary); box-shadow: 0 3px 0 var(--border-black); font-family: inherit;
+  color: var(--text-primary) !important; box-shadow: 0 3px 0 var(--border-black); font-family: inherit;
 }
 .lang-dropdown { 
   display: none; position: absolute; top: 100%; right: 0; margin-top: 8px; 
@@ -69,34 +73,40 @@ body {
 .lang-option:hover { background: #f7f7f7; }
 .lang-option.active { background: var(--duo-green); color: white; }
 
-/* Profile Elements */
+/* الصورة والاسم */
 .avatar { 
   width: 100px; height: 100px; border-radius: 50%; 
   border: 3px solid var(--border-black); box-shadow: 0 4px 0 var(--border-black);
-  margin: 0 auto 16px; object-fit: cover; display: block; /* تأكيد الظهور */
+  margin: 0 auto 16px; object-fit: cover; display: block !important; 
 }
-.site-name { font-family: 'Nunito', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 6px; }
+.site-name { 
+  font-family: 'Nunito', sans-serif; font-size: 28px; font-weight: 800; 
+  margin-bottom: 6px; color: var(--text-primary) !important; display: block !important;
+}
 .username-badge { 
-  display: inline-flex; align-items: center; gap: 6px; background: var(--bg-white);
+  display: inline-flex !important; align-items: center; gap: 6px; background: var(--bg-white);
   border: 2px solid var(--border-black); border-radius: 50px; padding: 5px 14px;
-  font-size: 14px; font-weight: 700; color: var(--text-secondary); margin-bottom: 16px;
-  text-decoration: none; box-shadow: 0 3px 0 var(--border-black);
+  font-size: 14px; font-weight: 700; color: var(--text-secondary) !important; 
+  margin-bottom: 16px; text-decoration: none; box-shadow: 0 3px 0 var(--border-black);
+}
+.bio {
+  color: var(--text-secondary) !important; display: block !important;
 }
 
-/* Navigation */
-.main-nav ul { list-style: none; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+/* القائمة */
+.main-nav ul { list-style: none; display: flex !important; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
 .nav-link { 
-  display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-md); 
-  font-weight: 700; font-size: 15px; color: var(--text-secondary); text-decoration: none; 
+  display: inline-flex !important; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-md); 
+  font-weight: 700; font-size: 15px; color: var(--text-secondary) !important; text-decoration: none; 
   border: 2px solid transparent; transition: all 0.1s; 
 }
 .nav-link:hover { background-color: #f7f7f7; color: var(--text-primary); }
 .nav-link.active { 
   background-color: var(--bg-white); border: 2px solid var(--border-black); 
-  color: var(--text-primary); box-shadow: 0 4px 0 var(--border-black); 
+  color: var(--text-primary) !important; box-shadow: 0 4px 0 var(--border-black); 
 }
 
-/* Dropdown Menu */
+/* القائمة المنسدلة */
 .dropdown { position: relative; display: inline-block; }
 .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content { display: block; }
 .dropdown-content {
@@ -113,12 +123,13 @@ body {
 .dropdown-item:hover { background: #f7f7f7; }
 .dropdown-item .icon { width: 18px; height: 18px; }
 
-/* Main Content & Cards */
+/* المحتوى والبطاقات */
 .site-main { flex: 1; max-width: 800px; width: 100%; margin: 0 auto; padding: 0 20px 40px; }
 .section { margin-bottom: 48px; scroll-margin-top: 60px; }
 .section-title { 
   font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 800; 
   margin-bottom: 20px; display: flex; align-items: center; gap: 8px; 
+  color: var(--text-primary) !important;
 }
 .icon { width: 24px; height: 24px; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; fill: none; flex-shrink: 0; }
 
@@ -127,7 +138,7 @@ body {
 
 .duo-card { 
   display: flex; flex-direction: column; padding: 20px; border-radius: var(--radius-lg); 
-  text-decoration: none; color: white; border: 2px solid rgba(0,0,0,0.1); 
+  text-decoration: none; color: white !important; border: 2px solid rgba(0,0,0,0.1); 
   box-shadow: 0 4px 0 rgba(0,0,0,0.15); transition: transform 0.1s, box-shadow 0.1s;
 }
 .duo-card:hover { transform: translateY(-3px); box-shadow: 0 7px 0 rgba(0,0,0,0.15); }
@@ -140,7 +151,7 @@ body {
 .duo-card p { font-size: 14px; line-height: 1.5; margin-bottom: 12px; flex-grow: 1; opacity: 0.95; }
 .card-action { font-size: 13px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; opacity: 0.9; }
 
-/* Platforms & Partners */
+/* المنصات والشركاء */
 .platforms-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .platform-square {
   width: 50px; height: 50px; background: var(--bg-white); border: 2px solid var(--border-black);
@@ -167,13 +178,13 @@ body {
 .partner-card h4 { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; margin-bottom: 6px; }
 .partner-card p { font-size: 13px; color: var(--text-secondary); }
 
-/* Footer */
+/* الفوتر */
 .site-footer { background: var(--bg-white); border-top: 2px solid var(--border-black); padding: 32px 20px; text-align: center; margin-top: auto; }
 .footer-links { display: flex; justify-content: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
 .footer-links a { color: var(--text-secondary); font-weight: 700; text-decoration: none; font-size: 13px; }
 .footer-links a:hover { color: var(--duo-green); }
 
-/* Mobile Tweaks */
+/* الهاتف */
 @media (max-width: 600px) {
   .site-name { font-size: 22px; } .section-title { font-size: 18px; }
   .platform-square { width: 44px; height: 44px; }
