@@ -1,9 +1,15 @@
 <header class="site-header">
   <div class="header-top">
-    <div></div>
+    <!-- Visitor Flag -->
+    <div class="visitor-flag" id="visitorFlag" style="opacity: 0;">
+      <img id="flagImg" src="" alt="Visitor Country Flag">
+      <span id="countryName">Loading...</span>
+    </div>
+
+    <!-- Language Switcher -->
     <div class="lang-switcher">
       <button class="lang-btn" id="langBtn" aria-label="Change Language">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <span id="currentLang">العربية</span>
       </button>
       <div class="lang-dropdown" id="langDropdown">
@@ -19,19 +25,20 @@
   <h1 class="site-name" data-i18n="name">Mohamed Nidhal Benyakhelf</h1>
   
   <a href="{{ site.social_links.github }}" class="username-badge" aria-label="GitHub Profile">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
     @nidalbenyakhelf
   </a>
   
   <p class="bio" data-i18n="bio">
-    مطور برمجيات وصانع أفلام وثائقية من المدية، الجزائر. أؤمن بأن التكنولوجيا والفن أداتان لربط الناس وخدمة المجتمع، وأبني أدوات بسيطة ذات تأثير حقيقي.
+    مطور برمجيات وصانع أفلام وثائقية من المدية، الجزائر. أؤمن بأن التكنولوجيا والفن أداتان لربط الناس وخدمة المجتمع.
   </p>
 
   <nav class="main-nav" aria-label="القائمة الرئيسية">
     <ul>
-      <li><a href="#about" class="nav-link" data-i18n="nav_about">نبذة</a></li>
-      <li><a href="#projects" class="nav-link" data-i18n="nav_projects">المشاريع</a></li>
-      <li><a href="#platforms" class="nav-link" data-i18n="nav_platforms">المنصات</a></li>
-      <li><a href="#contact" class="nav-link" data-i18n="nav_contact">تواصل</a></li>
+      <li><a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="/projects/" class="nav-link {% if page.url == '/projects/' %}active{% endif %}" data-i18n="nav_projects">المشاريع</a></li>
+      <li><a href="/filmmaking/" class="nav-link {% if page.url == '/filmmaking/' %}active{% endif %}" data-i18n="nav_films">الأفلام</a></li>
+      <li><a href="/cv/" class="nav-link {% if page.url == '/cv/' %}active{% endif %}" data-i18n="nav_cv">السيرة الذاتية</a></li>
     </ul>
   </nav>
 </header>
