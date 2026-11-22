@@ -1,27 +1,37 @@
 <header class="site-header">
-  <!-- 1. صورة الحساب الموحدة -->
+  <div class="header-top">
+    <div></div>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="langBtn" aria-label="Change Language">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="currentLang">العربية</span>
+      </button>
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-option active" data-lang="ar">العربية</button>
+        <button class="lang-option" data-lang="en">English</button>
+        <button class="lang-option" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+
   <img src="https://github.com/nidalbenyakhelf.png?size=256" alt="Mohamed Nidhal Benyakhelf" class="avatar">
   
-  <!-- 2. الاسم الحقيقي -->
-  <h1 class="site-name">Mohamed Nidhal Benyakhelf</h1>
+  <h1 class="site-name" data-i18n="name">Mohamed Nidhal Benyakhelf</h1>
   
-  <!-- 3. شارة اسم المستخدم الموحد -->
   <a href="{{ site.social_links.github }}" class="username-badge" aria-label="GitHub Profile">
     @nidalbenyakhelf
   </a>
   
-  <!-- 4. النبذة التعريفية -->
-  <p class="bio">
+  <p class="bio" data-i18n="bio">
     مطور برمجيات وصانع أفلام وثائقية من المدية، الجزائر. أؤمن بأن التكنولوجيا والفن أداتان لربط الناس وخدمة المجتمع، وأبني أدوات بسيطة ذات تأثير حقيقي.
   </p>
 
-  <!-- 5. قائمة التنقل (روابط HTML صريحة 100% للزحف) -->
   <nav class="main-nav" aria-label="القائمة الرئيسية">
     <ul>
-      <li><a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">الرئيسية</a></li>
-      <li><a href="{{ '/projects/' | relative_url }}" class="nav-link {% if page.url == '/projects/' %}active{% endif %}">المشاريع</a></li>
-      <li><a href="{{ '/filmmaking/' | relative_url }}" class="nav-link {% if page.url == '/filmmaking/' %}active{% endif %}">الأفلام</a></li>
-      <li><a href="{{ '/cv/' | relative_url }}" class="nav-link {% if page.url == '/cv/' %}active{% endif %}">السيرة الذاتية</a></li>
+      <li><a href="#about" class="nav-link" data-i18n="nav_about">نبذة</a></li>
+      <li><a href="#projects" class="nav-link" data-i18n="nav_projects">المشاريع</a></li>
+      <li><a href="#platforms" class="nav-link" data-i18n="nav_platforms">المنصات</a></li>
+      <li><a href="#contact" class="nav-link" data-i18n="nav_contact">تواصل</a></li>
     </ul>
   </nav>
 </header>
