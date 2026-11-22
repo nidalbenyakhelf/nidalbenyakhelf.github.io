@@ -5,15 +5,10 @@
 </head>
 <body>
     {% include header.html %}
-    
     <main class="site-main">
-        <!-- هذا السطر هو المسؤول عن تحويل محتوى الصفحات إلى HTML -->
-        {{ content }} 
+        {{ content }}
     </main>
-    
     {% include footer.html %}
-    
-    <!-- تحميل JS في النهاية لتحسين الأداء -->
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
