@@ -6,20 +6,21 @@
   --border-black: #2c3e50; --radius-lg: 16px; --radius-md: 12px;
 }
 
+/* إعادة ضبط أساسية */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-
-/* منع المؤشر المخصص من الظهور على الهاتف */
-@media (min-width: 769px) { body, a, button, input { cursor: none !important; } }
-@media (max-width: 768px) { .custom-cursor { display: none !important; } body, a, button, input { cursor: auto !important; } }
 
 body { 
   background-color: var(--bg-white); color: var(--text-primary); 
   font-family: 'Readex Pro', 'Nunito', sans-serif; font-size: 16px; 
   line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased;
+  display: flex; flex-direction: column; /* مهم جداً لتمديد المحتوى */
 }
 
 /* --- Custom Cursor --- */
+@media (min-width: 769px) { body, a, button, input { cursor: none !important; } }
+@media (max-width: 768px) { .custom-cursor { display: none !important; } body, a, button, input { cursor: auto !important; } }
+
 .custom-cursor {
   width: 36px; height: 36px; position: fixed; top: 0; left: 0;
   pointer-events: none; z-index: 9999; transform: translate(-50%, -50%);
@@ -28,10 +29,17 @@ body {
 .custom-cursor svg { width: 100%; height: 100%; fill: white; stroke: var(--border-black); stroke-width: 2.5; }
 .custom-cursor.clicking { transform: translate(-50%, -50%) scale(0.85); }
 
-/* --- Header & Top Bar --- */
-.site-header { text-align: center; padding: 40px 20px 24px; max-width: 680px; margin: 0 auto; width: 100%; }
-.header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; width: 100%; }
+/* --- Header Layout Fix --- */
+.site-header { 
+  text-align: center; padding: 40px 20px 24px; max-width: 680px; margin: 0 auto; width: 100%; 
+}
 
+.header-top { 
+  display: flex; justify-content: space-between; align-items: center; 
+  margin-bottom: 32px; width: 100%; 
+}
+
+/* Visitor Flag Styling */
 .visitor-flag {
   display: inline-flex; align-items: center; gap: 6px; background: #f0f0f0;
   border: 2px solid var(--border-black); border-radius: 20px; padding: 3px 8px;
@@ -39,6 +47,7 @@ body {
 }
 .visitor-flag img { width: 16px; height: 12px; object-fit: cover; border-radius: 2px; border: 1px solid #ccc; }
 
+/* Language Switcher Styling */
 .lang-switcher { position: relative; display: inline-block; }
 .lang-btn { 
   display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: var(--bg-white);
@@ -60,10 +69,11 @@ body {
 .lang-option:hover { background: #f7f7f7; }
 .lang-option.active { background: var(--duo-green); color: white; }
 
+/* Profile Elements */
 .avatar { 
   width: 100px; height: 100px; border-radius: 50%; 
   border: 3px solid var(--border-black); box-shadow: 0 4px 0 var(--border-black);
-  margin: 0 auto 16px; object-fit: cover; 
+  margin: 0 auto 16px; object-fit: cover; display: block; /* تأكيد الظهور */
 }
 .site-name { font-family: 'Nunito', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 6px; }
 .username-badge { 
@@ -73,7 +83,7 @@ body {
   text-decoration: none; box-shadow: 0 3px 0 var(--border-black);
 }
 
-/* --- Navigation Dropdown Fix --- */
+/* Navigation */
 .main-nav ul { list-style: none; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
 .nav-link { 
   display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-md); 
@@ -86,8 +96,8 @@ body {
   color: var(--text-primary); box-shadow: 0 4px 0 var(--border-black); 
 }
 
+/* Dropdown Menu */
 .dropdown { position: relative; display: inline-block; }
-/* جعل القائمة تظهر عند النقر أو الهوفر وتبقى مفتوحة للنقر */
 .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content { display: block; }
 .dropdown-content {
   display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
@@ -103,7 +113,7 @@ body {
 .dropdown-item:hover { background: #f7f7f7; }
 .dropdown-item .icon { width: 18px; height: 18px; }
 
-/* --- Sections & Cards --- */
+/* Main Content & Cards */
 .site-main { flex: 1; max-width: 800px; width: 100%; margin: 0 auto; padding: 0 20px 40px; }
 .section { margin-bottom: 48px; scroll-margin-top: 60px; }
 .section-title { 
@@ -130,7 +140,7 @@ body {
 .duo-card p { font-size: 14px; line-height: 1.5; margin-bottom: 12px; flex-grow: 1; opacity: 0.95; }
 .card-action { font-size: 13px; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; opacity: 0.9; }
 
-/* --- Platform Squares --- */
+/* Platforms & Partners */
 .platforms-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .platform-square {
   width: 50px; height: 50px; background: var(--bg-white); border: 2px solid var(--border-black);
@@ -147,7 +157,6 @@ body {
 }
 .platform-square:hover::after { opacity: 1; }
 
-/* --- Partners Section --- */
 .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
 .partner-card {
   background: var(--bg-white); border: 2px solid var(--border-black); border-radius: var(--radius-md);
@@ -158,13 +167,13 @@ body {
 .partner-card h4 { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; margin-bottom: 6px; }
 .partner-card p { font-size: 13px; color: var(--text-secondary); }
 
-/* --- Footer --- */
+/* Footer */
 .site-footer { background: var(--bg-white); border-top: 2px solid var(--border-black); padding: 32px 20px; text-align: center; margin-top: auto; }
 .footer-links { display: flex; justify-content: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
 .footer-links a { color: var(--text-secondary); font-weight: 700; text-decoration: none; font-size: 13px; }
 .footer-links a:hover { color: var(--duo-green); }
 
-/* --- Mobile Tweaks --- */
+/* Mobile Tweaks */
 @media (max-width: 600px) {
   .site-name { font-size: 22px; } .section-title { font-size: 18px; }
   .platform-square { width: 44px; height: 44px; }
