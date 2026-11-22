@@ -42,20 +42,25 @@ function setLanguage(lang) {
     if (translations[lang]?.[key]) el.textContent = translations[lang][key]; 
   });
   const names = { ar: 'العربية', en: 'English', fr: 'Français' };
-  document.getElementById('currentLang').textContent = names[lang];
+  const langEl = document.getElementById('currentLang');
+  if (langEl) langEl.textContent = names[lang];
   document.querySelectorAll('.lang-option').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
   localStorage.setItem('preferredLang', lang);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   // Language Switcher
-  const btn = document.getElementById('langBtn'), drop = document.getElementById('langDropdown');
-  setLanguage(localStorage.getItem('preferredLang') || 'ar');
+  const btn = document.getElementById('langBtn');
+  const drop = document.getElementById('langDropdown');
   
-  btn.addEventListener('click', e => { e.stopPropagation(); drop.classList.toggle('active'); });
-  document.querySelectorAll('.lang-option').forEach(b => b.addEventListener('click', () => { setLanguage(b.dataset.lang); drop.classList.remove('active'); }));
-  document.addEventListener('click', () => drop.classList.remove('active'));
-  drop.addEventListener('click', e => e.stopPropagation());
+  if (btn && drop) {
+    setLanguage(localStorage.getItem('preferredLang') || 'ar');
+    
+    btn.addEventListener('click', e => { e.stopPropagation(); drop.classList.toggle('active'); });
+    document.querySelectorAll('.lang-option').forEach(b => b.addEventListener('click', () => { setLanguage(b.dataset.lang); drop.classList.remove('active'); }));
+    document.addEventListener('click', () => drop.classList.remove('active'));
+    drop.addEventListener('click', e => e.stopPropagation());
+  }
 
   // Dropdown Menu Fix for Touch Devices
   const dropdowns = document.querySelectorAll('.dropdown');
@@ -63,21 +68,19 @@ document.addEventListener('DOMContentLoaded', () => {
     dd.addEventListener('click', e => {
       if(window.innerWidth <= 768) {
         e.preventDefault();
-        dd.querySelector('.dropdown-content').classList.toggle('active-mobile');
+        const content = dd.querySelector('.dropdown-content');
+        if(content) content.classList.toggle('active-mobile');
       }
     });
   });
 
-  // === Custom Cursor Fix ===
-  // تفعيل المؤشر المخصص فقط إذا لم يكن الجهاز هاتفًا
+  // === Custom Cursor Safe Logic ===
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   if (!isMobile) {
     const cursor = document.createElement('div');
     cursor.className = 'custom-cursor';
     cursor.innerHTML = '<svg viewBox="0 0 24 24"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/></svg>';
     document.body.appendChild(cursor);
-    
-    // إضافة الفئة التي تخفي مؤشر النظام وتظهر المؤشر المخصص
     document.body.classList.add('cursor-active');
     
     document.addEventListener('mousemove', e => { 
@@ -88,8 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mouseup', () => cursor.classList.remove('clicking'));
   }
 
-  // === Visitor Flag Fix ===
-  // إخفاء العلم تماماً حتى نجاح الجلب لمنع الوميض
+  // === Visitor Flag Safe Logic ===
   const flagEl = document.getElementById('visitorFlag');
   const flagImg = document.getElementById('flagImg');
   const countryName = document.getElementById('countryName');
@@ -101,12 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if(data.country_code) {
           flagImg.src = `https://flagcdn.com/w40/${data.country_code.toLowerCase()}.png`;
           countryName.textContent = data.country_name;
-          // إظهار العنصر فقط بعد اكتمال البيانات
           flagEl.classList.add('loaded');
         }
       })
       .catch(() => {
-        // في حالة الفشل، نظهر "Global" بدلاً من الاختفاء المفاجئ
         flagImg.style.display = 'none';
         countryName.textContent = "Global";
         flagEl.classList.add('loaded');
